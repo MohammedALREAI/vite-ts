@@ -1,11 +1,15 @@
-import { useState } from 'react'
-import './App.css'
-import EditorsTeam from './editor'
+import "./app.css";
+import DAWApp from './components/DAWApp';
+import './index.css';
+import './styles/base.scss';
+
+import './components/CodeBlock/CodeBlock.scss';
 
 function App() {
      return (
-          <div className="App">
-               <EditorsTeam />
+          <div className="app">
+               <DAWApp />
+
           </div>
      )
 }
