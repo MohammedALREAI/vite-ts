@@ -221,7 +221,7 @@ const TrackInfo: React.FC<Props> = ({
                 dispatch({ type: types.REMOVE_EFFECT, id: effect.id })
               }
             >
-              <ion-icon name="remove" />
+              <Icon name="remove" />
               &nbsp;&nbsp;Remove
             </button>
           </div>

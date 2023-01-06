@@ -1,5 +1,4 @@
-import { midiNotesLowerCase as midiNotes } from '../configs/midiConfig';
-import { instrumentConfig } from '../configs';
+import { instrumentConfig, midiNotesLowerCase as midiNotes } from "../config";
 
 /*
  * Tab Functions
@@ -118,19 +117,19 @@ export function gridToSamplerSteps(grid) {
 
 export function fretToNote(fret: number, string) {
   if (fret === undefined) {
-    throw new Error('Fret is required');
+    throw new Error("Fret is required");
   }
 
   if (!Number.isInteger(fret)) {
-    throw new Error('Fret has to be an integer');
+    throw new Error("Fret has to be an integer");
   }
 
   if (string === undefined) {
-    throw new Error('String is required');
+    throw new Error("String is required");
   }
 
-  if (typeof string !== 'string') {
-    throw new Error('String has to be a string');
+  if (typeof string !== "string") {
+    throw new Error("String has to be a string");
   }
 
   const stringMidi = midiNotes.indexOf(string);

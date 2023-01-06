@@ -1,21 +1,50 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+     "compilerOptions": {
+          "target": "ESNext",
+          "useDefineForClassFields": true,
+          "plugins": [
+               {
+                    "name": "ts-css-modules-vite-plugin",
+                    "root": "./",
+                    "options": {
+                         "camelCase": true,
+                         "namedExport": true,
+                         "generateScopedName": "[name]__[local]___[hash:base64:5]"
+                    }
+               }
+          ],
+          "lib": [
+               "DOM",
+               "DOM.Iterable",
+               "ESNext"
+          ],
+          "allowJs": false,
+          "skipLibCheck": true,
+          "noImplicitAny": false,
+          "esModuleInterop": false,
+          "allowSyntheticDefaultImports": true,
+          "strict": false,
+          "forceConsistentCasingInFileNames": true,
+          "module": "ESNext",
+          "moduleResolution": "Node",
+          "resolveJsonModule": true,
+          "isolatedModules": true,
+          "noEmit": true,
+          "jsx": "react-jsx",
+          "types": [
+               "vite-plugin-svgr/client",
+               "node"
+          ],
+     },
+     "include": [
+          "src"
+     ],
+     "exclude": [
+          "node_modules"
+     ],
+     "references": [
+          {
+               "path": "./tsconfig.node.json"
+          }
+     ]
 }
