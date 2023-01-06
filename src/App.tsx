@@ -1,4 +1,4 @@
-import "./app.css";
+import "./App.css";
 import DAWApp from './components/DAWApp';
 import './index.css';
 import './styles/base.scss';
